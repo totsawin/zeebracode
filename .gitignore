@@ -1,0 +1,6 @@
+# dependencies
+/server/node_modules
+# misc
+docker-compose.yml
+.DS_Store
+/server/.env
