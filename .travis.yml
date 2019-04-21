@@ -11,9 +11,9 @@ before_install:
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
-  - gcloud config set project multi-k8s-237614
-  - gcloud config set compute/zone australia-southeast1-a
-  - gcloud container clusters get-credentials multi-cluster
+  - gcloud config set project zebracode
+  - gcloud config set compute/zone asia-southeast1-b
+  - gcloud container clusters get-credentials cluster-1
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 #  - docker build -t totsawin/client-test -f ./client/Dockerfile.dev ./client
 script: skip
