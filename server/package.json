@@ -1,0 +1,20 @@
+{
+    "dependencies": {
+        "body-parser": "*",
+        "cors": "2.8.4",
+        "express": "4.16.3",
+        "nodemon": "1.18.3",
+        "pg": "7.4.3",
+        "redis": "2.8.0",
+        "uuid-validate": "0.0.3"
+    },
+    "scripts": {
+        "dev": "nodemon",
+        "start": "node index.js",
+        "start-local": "node -r dotenv/config index.js",
+        "start-local-debug": "node -r dotenv/config --inspect index.js"
+    },
+    "devDependencies": {
+        "dotenv": "^7.0.0"
+    }
+}

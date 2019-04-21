@@ -1,0 +1,31 @@
+$default-font-size: 1.6rem;
+.above-the-fold {
+    font-size: $default-font-size;
+    height: 100vh;
+    position: relative;
+
+    .branding {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &__header {
+            font-size: 8rem;
+            letter-spacing: -0.05rem;
+            line-height: .9rem;
+        }
+
+        &__description {
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: lighter;
+        }
+    }
+
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

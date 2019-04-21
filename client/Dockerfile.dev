@@ -1,0 +1,15 @@
+# Specify base image
+FROM node:alpine
+
+WORKDIR '/app'
+
+# Install some dependencies
+COPY ./package.json ./
+RUN npm install
+COPY ./ ./
+
+# Open port 4200. This is the port that our development server uses
+EXPOSE 4200
+
+# Default command
+CMD ["npm", "run", "start"]

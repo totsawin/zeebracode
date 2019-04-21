@@ -1,0 +1,14 @@
+<div *ngIf="code$ | async; let response">
+  <div *ngIf="response.code">
+    <div *ngIf="response.counter < 5">
+      <h2>Geniune</h2>
+    </div>
+    <div *ngIf="response.counter >= 5">
+      <h2>Fake Alert!</h2>
+    </div>
+    This generated code: {{ response.code }} has been used {{ response.counter }} time(s).
+  </div>
+  <div *ngIf="response.error">
+    <h3>{{ response.error }}</h3>
+  </div>
+</div>
