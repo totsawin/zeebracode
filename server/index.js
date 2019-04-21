@@ -21,7 +21,10 @@ const pgClient = new Pool({
     port: keys.pgPort
 });
 pgClient.on('error', () => console.log('Lost PG Connection'));
-pgClient.query('CREATE TABLE IF NOT EXISTS values (number INT)')
+pgClient.query('CREATE TABLE IF NOT EXISTS codes (code uuid, counter integer)')
+    .catch(err => console.log(err));
+
+pgClient.query('INSERT INTO codes SELECT $1, $2 WHERE NOT EXISTS ( SELECT * FROM codes WHERE code = $1)', ['d1116908-633a-11e9-b0d6-03c7be6935f6', 0])
     .catch(err => console.log(err));
 
 // Express Route Handlers
